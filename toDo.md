@@ -1,0 +1,3 @@
+- cambia favicon
+- genera readme adeguato
+- cambia palette colori
