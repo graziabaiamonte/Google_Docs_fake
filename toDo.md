@@ -1,2 +1,0 @@
-- genera readme adeguato
-- cea qualche notifica, due account, 3 documenti a caso (per far capire che tutto è funzionante e attivo)

@@ -25,10 +25,7 @@ A collaborative web application that emulates the core features of Google Docs: 
 
 Try the application by visiting the [Demo](https://google-docs-fake.vercel.app/)
 
-##
-
 <img alt="demo app" src="https://google-docs-fake.vercel.app/assets/images_readme/Screenshot 2025-10-02 alle 11.58.05.png">
-<img alt="demo app" src="https://google-docs-fake.vercel.app/assets/images_readme/Screenshot 2025-10-02 alle 11.59.25.png">
 <img alt="demo app" src="https://google-docs-fake.vercel.app/assets/images_readme/Screenshot 2025-10-02 alle 12.02.51.png">
 <img alt="demo app" src="https://google-docs-fake.vercel.app/assets/images_readme/Screenshot 2025-10-02 alle 12.03.56.png">
 <img alt="demo app" src="https://google-docs-fake.vercel.app/assets/images_readme/Screenshot 2025-10-02 alle 12.04.41.png">
