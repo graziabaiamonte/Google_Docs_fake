@@ -1,17 +1,17 @@
-import { Inter as FontSans } from "next/font/google"
+import { Inter as FontSans } from "next/font/google";
 
 // Import della utility function per combinare classi CSS
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-import './globals.css'
+import "./globals.css";
 // Import del tipo Metadata per la tipizzazione dei metadati SEO
-import { Metadata } from "next"
+import { Metadata } from "next";
 // Import del provider Clerk per gestire l'autenticazione nell'intera app
-import { ClerkProvider } from "@clerk/nextjs"
+import { ClerkProvider } from "@clerk/nextjs";
 // Import del tema scuro predefinito di Clerk
-import { dark } from "@clerk/themes"
+import { dark } from "@clerk/themes";
 // Import del provider personalizzato per context aggiuntivi (probabilmente Liveblocks)
-import Provider from "./Provider"
+import Provider from "./Provider";
 
 // Configurazione del font Inter
 const fontSans = FontSans({
@@ -21,18 +21,21 @@ const fontSans = FontSans({
   // Nome della variabile CSS personalizzata che conterrà questo font
   // Sarà disponibile come --font-sans nelle classi CSS
   variable: "--font-sans",
-})
-
+});
 
 // Questi vengono iniettati nel <head> di ogni pagina
 export const metadata: Metadata = {
-  title: 'LiveDocs',
-  description: 'Your go-to collaborative editor',
-}
+  title: "LiveDocs",
+  description: "Your go-to collaborative editor",
+};
 
 // Root Layout component - avvolge tutte le pagine dell'applicazione
 // Viene eseguito una sola volta e definisce la struttura HTML di base
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     // ClerkProvider fornisce il contesto di autenticazione a tutta l'app
     <ClerkProvider
@@ -41,15 +44,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         // Applica il tema scuro predefinito
         baseTheme: dark,
         // Variabili CSS personalizzate per sovrascrivere il tema
-        variables: { 
+        variables: {
           // Colore primario per pulsanti, link, elementi attivi (blu)
-          colorPrimary: "#3371FF" ,
+          colorPrimary: "#3371FF",
           // Dimensione del font di base per tutti i componenti Clerk
-          fontSize: '16px'
+          fontSize: "16px",
         },
       }}
     >
-
       {/* suppressHydrationWarning: evita warning per differenze minori tra server e client rendering */}
       <html lang="en" suppressHydrationWarning>
         <body
@@ -75,5 +77,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
