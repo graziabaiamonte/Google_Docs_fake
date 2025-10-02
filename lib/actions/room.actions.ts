@@ -200,7 +200,6 @@ export const removeCollaborator = async ({
     revalidatePath(`/documents/${roomId}`);
     return parseStringify(updatedRoom);
   } catch (error) {
-    // Log dell'errore in caso di problemi nella rimozione del collaboratore
     console.log(`Error happened while removing a collaborator: ${error}`);
   }
 };
@@ -215,7 +214,6 @@ export const deleteDocument = async (roomId: string) => {
     // Reindirizza l'utente alla homepage dopo l'eliminazione
     redirect("/");
   } catch (error) {
-    // Log dell'errore in caso di problemi nell'eliminazione del documento
     console.log(`Error happened while deleting a room: ${error}`);
   }
 };
